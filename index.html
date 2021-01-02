@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>avatar gen</title>
+    <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/white-heart_1f90d.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="curls-back" id="hair-back"></div>
+      <div class="curls-back2" id="hair-back2"></div>
+      <div class="head">
+        <div class="left-ear ear"></div>
+        <div class="right-ear ear"></div>
+        <div class="brow-left brow"></div>
+        <div class="brow-right brow"></div>
+        <div class="eye-left eye">
+          <div class="iris"></div>
+        </div>
+        <div class="eye-right eye">
+          <div class="iris"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+        <div class="curls-front" id="hair-top"></div>
+      </div>
+      <div class="neck"></div>
+    </div>
+
+    <div class="input-container">
+      <div>
+        <label for="hair-color">hair color</label>
+        <input type="color" id="hair-color" name="hair-color" value="#e184b6" />
+      </div>
+      <div>
+        <label for="skin-tone">skin tone</label>
+        <input type="color" id="skin-tone" name="skin-tone" value="#8a6247" />
+      </div>
+      <div>
+        <label for="eye-color">eye color</label>
+        <input type="color" id="eye-color" name="eye-color" value="351f0e" />
+      </div>
+    </div>
+  </body>
+</html>
