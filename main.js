@@ -1,5 +1,4 @@
 //update hair color
-
 const hairColor = document.querySelector("#hair-color");
 hairColor.addEventListener("input", function (e) {
   changeHair(e.target.value);
@@ -59,5 +58,57 @@ function shadeColor(color, percent) {
   return "#" + RR + GG + BB;
 }
 
+//CHANGE HAIRSTYLES
 
-// console.log(shadeColor("#e184b6", -35))
+//select hair elements
+const hairBack = document.querySelector("#hair-back");
+const hairBack2 = document.querySelector("#hair-back2");
+const hairTop = document.querySelector("#hair-top");
+
+//clear hair classes:
+function clearHair() {
+  hairBack.className = "";
+  hairBack2.className = "";
+  hairTop.className = "";
+}
+
+//select dropdown
+const hairSelect = document.querySelector("#hair-select");
+
+hairSelect.addEventListener("change", function (e) {
+  let hairStyle = e.target.value;
+  switch (hairStyle) {
+    case "med-curls":
+      medCurls();
+      break;
+    case "med-bob":
+      medBob();
+      break;
+    case "long-straight":
+      longStraight();
+      break;
+    case "bald":
+      clearHair();
+  }
+});
+
+//MEDIUM CURLY
+
+function medCurls() {
+  clearHair();
+  hairBack.classList.add('med-curls-back');
+  hairBack2.classList.add('med-curls-back2');
+  hairTop.classList.add('med-curls-front');
+}
+
+function medBob() {
+  clearHair();
+  hairBack.classList.add('med-bob-back');
+  hairTop.classList.add('straight-top');
+}
+
+function longStraight() {
+  clearHair();
+  hairBack.classList.add('long-straight');
+  hairTop.classList.add('straight-top');
+}

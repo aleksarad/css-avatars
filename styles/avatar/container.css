@@ -1,0 +1,25 @@
+/* CONTAINER + BASE HEAD */
+/* these are unlikely to change */
+
+/* AVATAR */
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  background: var(--circle);
+}
+
+.head {
+  position: absolute;
+  width: 36%;
+  height: 48%;
+  border-radius: 50%;
+  background: var(--skin);
+  left: 32%;
+  top: 18%;
+  z-index: 2;
+}

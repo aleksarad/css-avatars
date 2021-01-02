@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+:root {
+  --skin: #8a6247;
+  --shadow: #6b4c37;
+  --hair: #e184b6;
+  --hair-shadow: #925576;
+  --brows: #7d7364;
+  --eye: #351f0e;
+  --black: #1a1a1a;
+  --circle: white;
+  --background: #CDC7F1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #292929;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.flex-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  background: var(--background);
+  width: 50%;
+  height: 100%;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+}
+
+h1 {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}

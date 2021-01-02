@@ -1,0 +1,163 @@
+/* HAIR */
+
+/* SHORT STRAIGHT*/
+.straight-top {
+  position: absolute;
+  width: 108%;
+  height: 95%;
+  background: transparent;
+  border-top: 2.8rem solid var(--hair);
+  border-radius: 50%;
+  left: -4%;
+  top: -9%;
+}
+
+.straight-top::after {
+  content: "";
+  position: absolute;
+  width: 1.5%;
+  height: 25%;
+  border-radius: 10px;
+  background: var(--skin);
+  left: 48.5%;
+  top: -14%;
+}
+
+.med-bob-back {
+  position: absolute;
+  width: 60%;
+  height: 58%;
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+  background: var(--hair);
+  box-shadow: 0 0 2px var(--hair-shadow);
+  left: 20%;
+  top: 14%;
+}
+
+/* LONG STRAIGHT */
+
+.long-straight {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  border-radius: 50%;
+  background: var(--hair);
+  box-shadow: 0 0 2px var(--hair-shadow);
+  left: 20%;
+  top: 14%;
+}
+
+.long-straight::after {
+  content: "";
+  position: absolute;
+  height: 35%;
+  width: 45%;
+  border-radius: 50%;
+  background: var(--circle);
+  bottom: -3%;
+  left: 27%;
+}
+
+/* MEDIUM CURLY */
+
+.med-curls-front {
+  position: absolute;
+  width: 75%;
+  height: 39%;
+  border-radius: 50%;
+  background: var(--hair);
+  box-shadow: 0px 4px 0px 0px var(--shadow);
+  top: -12%;
+  left: 20%;
+  z-index: 5;
+}
+
+.med-curls-front::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 85%;
+  border-radius: 50%;
+  background: var(--hair);
+  left: -70%;
+  top: 50%;
+  transform: rotate(-48deg);
+}
+
+.med-curls-front::after {
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 90%;
+  border-radius: 50%;
+  background: var(--hair);
+  left: 66%;
+  top: 55%;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+
+.med-curls-back {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: 28%;
+  left: 21%;
+}
+
+.med-curls-back::before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: 60%;
+  left: -15%;
+}
+
+.med-curls-back::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 80%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: 100%;
+  left: 45%;
+}
+
+.med-curls-back2 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: 28%;
+  right: 21%;
+  transform: scaleX(-1);
+}
+
+.med-curls-back2::before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: 60%;
+  left: -15%;
+}
+
+.med-curls-back2::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 80%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: 100%;
+  left: 45%;
+}

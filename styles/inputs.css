@@ -1,0 +1,36 @@
+/* INPUTS */
+.input-container, .select-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+label {
+  display: block;
+}
+
+.input-container div {
+  margin: 0 2%;
+  text-align: center;
+}
+
+input[type="color"] {
+  width: 45px;
+  height: 25px;
+  border: none;
+  padding: 0;
+  margin: 5px 0;
+  color: var(--background);
+  background-color: var(--background);
+  border-bottom: 2px solid var(--background);
+}
+
+input::-webkit-color-swatch {
+  border: 1px solid #292929;
+  border-radius: 10px;
+}
+
+input:hover, select:hover {
+  cursor: pointer;
+}
