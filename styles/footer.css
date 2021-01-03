@@ -1,0 +1,17 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background: var(--accent);
+    z-index: 3;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer img {
+    width: 12px;
+}
+

@@ -12,70 +12,83 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-      <h1>css avatars</h1>
+    <h1>css avatars</h1>
     <div class="flex-container">
       <div class="left">
-        <div class="container">
-          <div class="" id="hair-back"></div>
-          <div class="" id="hair-back2"></div>
-          <div class="head">
-            <div class="left-ear ear"></div>
-            <div class="right-ear ear"></div>
-            <div class="brow-left brow"></div>
-            <div class="brow-right brow"></div>
-            <div class="eye-left eye">
-              <div class="iris"></div>
+        <div class="avatar-input-container">
+          <div class="container">
+            <div class="med-curls-back" id="hair-back"></div>
+            <div class="med-curls-back2" id="hair-back2"></div>
+            <div class="head">
+              <div class="left-ear ear"></div>
+              <div class="right-ear ear"></div>
+              <div class="brow-left brow"></div>
+              <div class="brow-right brow"></div>
+              <div class="eye-left eye">
+                <div class="iris"></div>
+              </div>
+              <div class="eye-right eye">
+                <div class="iris"></div>
+              </div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="med-curls-front" id="hair-top"></div>
             </div>
-            <div class="eye-right eye">
-              <div class="iris"></div>
-            </div>
-            <div class="nose"></div>
-            <div class="mouth"></div>
-            <div class="" id="hair-top"></div>
+            <div class="neck"></div>
           </div>
-          <div class="neck"></div>
-        </div>
 
-        <div class="input-container">
-          <div>
-            <label for="hair-color">hair color</label>
-            <input
-              type="color"
-              id="hair-color"
-              name="hair-color"
-              value="#e184b6"
-            />
+          <div class="input-container">
+            <div>
+              <label for="hair-color">hair color</label>
+              <input
+                type="color"
+                id="hair-color"
+                name="hair-color"
+                value="#e184b6"
+              />
+            </div>
+            <div>
+              <label for="skin-tone">skin tone</label>
+              <input
+                type="color"
+                id="skin-tone"
+                name="skin-tone"
+                value="#8a6247"
+              />
+            </div>
+            <div>
+              <label for="eye-color">eye color</label>
+              <input
+                type="color"
+                id="eye-color"
+                name="eye-color"
+                value="#351f0e"
+              />
+            </div>
           </div>
-          <div>
-            <label for="skin-tone">skin tone</label>
-            <input
-              type="color"
-              id="skin-tone"
-              name="skin-tone"
-              value="#8a6247"
-            />
+          <div class="select-container">
+            <label for="hairstyles">hairstyle:</label>
+            <select name="hairstyles" id="hair-select">
+              <option value="med-curls" selected>medium curls</option>
+              <option value="med-bob">medium straight</option>
+              <option value="long-straight">long straight</option>
+              <option value="bald">bald</option>
+            </select>
           </div>
-          <div>
-            <label for="eye-color">eye color</label>
-            <input
-              type="color"
-              id="eye-color"
-              name="eye-color"
-              value="#351f0e"
-            />
-          </div>
-        </div>
-        <div class="select-container">
-          <label for="hairstyles">hairstyle:</label>
-          <select name="hairstyles" id="hair-select">
-            <option value="med-curls">medium curls</option>
-            <option value="med-bob">medium straight</option>
-            <option value="long-straight">long straight</option>
-            <option value="bald">bald</option>
-          </select>
         </div>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <div class="code-container"></div>
+      </div>
     </div>
+    <footer>
+      <p>
+        made by
+        <a href="https://github.com/aleksarad" target="_blank">aleksa</a>
+        <img
+          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/white-heart_1f90d.png"
+        />
+      </p>
+    </footer>
   </body>
 </html>

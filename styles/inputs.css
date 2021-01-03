@@ -27,7 +27,7 @@ input[type="color"] {
 }
 
 input::-webkit-color-swatch {
-  border: 1px solid #292929;
+  border: 2px solid white;
   border-radius: 10px;
 }
 

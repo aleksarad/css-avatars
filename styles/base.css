@@ -10,6 +10,7 @@
   --black: #1a1a1a;
   --circle: white;
   --background: #CDC7F1;
+  --accent: #A095E8;
 }
 
 * {
@@ -33,15 +34,37 @@ body {
   background: var(--background);
   width: 50%;
   height: 100%;
+  position: relative;
 }
 
 .right {
   width: 50%;
   height: 100%;
+  position: relative;
 }
 
 h1 {
   position: fixed;
   text-align: center;
   width: 100%;
+  z-index: 3;
+}
+
+.code-container {
+  background: var(--background);
+  width: 70%;
+  height: 70%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.avatar-input-container {
+  width: 500px;
+  height: 530px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
