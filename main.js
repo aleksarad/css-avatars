@@ -112,3 +112,31 @@ function longStraight() {
   hairBack.classList.add('long-straight');
   hairTop.classList.add('straight-top');
 }
+
+
+//generate button 
+const generateButton = document.querySelector("#generate");
+generateButton.addEventListener("click", function(){
+  const avatarCode = document.querySelector("#avatar-code");
+  const avatarHTML = document.querySelector(".container").outerHTML;
+  avatarCode.textContent = `${avatarHTML}`
+})
+
+
+//code
+// const avatarContainer = document.querySelector(".container").outerHTML
+// console.log(document.querySelector(".container").outerHTML)
+// console.log(window.getComputedStyle(document.querySelector(".container")));
+// const avatarCode = document.querySelector("#avatar-code");
+// avatarCode.textContent = `${avatarContainer}`
+
+
+
+//what do we need our generated output to contain?
+
+//HTML with updated classes - CHECK
+//CSS
+//either we pull the live css from somewhere
+// OR we can store the classes in js variables, we would need to keep track of colors too
+
+console.log(document.styleSheets[0])
