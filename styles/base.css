@@ -9,7 +9,7 @@
   --eye: #351f0e;
   --black: #1a1a1a;
   --circle: white;
-  --background: #CDC7F1;
+  --background: #cdc7f1;
   --accent: #958adf;
   --font-color: #292929;
 }
@@ -44,7 +44,6 @@ body {
   position: relative;
 }
 
-
 h1 {
   position: fixed;
   text-align: center;
@@ -60,7 +59,10 @@ h1 {
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .avatar-input-container {
@@ -69,5 +71,8 @@ h1 {
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

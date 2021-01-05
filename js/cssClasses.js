@@ -163,38 +163,37 @@ const mediumStraightClass = (
   skinShadowHex,
   circleHex
 ) => {
-  return `.straight-top {
-      position: absolute;
-      width: 108%;
-      height: 95%;
-      background: transparent;
-      border-top: 2.8rem solid ${hairHex};
-      border-radius: 50%;
-      left: -4%;
-      top: -9%;
-    }
-    
-    .straight-top::after {
-      content: "";
-      position: absolute;
-      width: 1.5%;
-      height: 25%;
-      border-radius: 10px;
-      background: ${skinHex};
-      left: 48.5%;
-      top: -14%;
-    }
-    
-    .med-bob-back {
-      position: absolute;
-      width: 60%;
-      height: 58%;
-      border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
-      background: ${hairHex};
-      box-shadow: 0 0 2px var ${hairShadowHex};
-      left: 20%;
-      top: 13%;
-    }`;
+  return `.med-bob-top {
+    position: absolute;
+    width: 108%;
+    height: 95%;
+    background: transparent;
+    border-top: 2.8rem solid ${hairHex};
+    border-radius: 50%;
+    left: -4%;
+    top: -9%;
+  }
+  
+  .med-bob-top::after {
+    content: "";
+    position: absolute;
+    width: 1.5%;
+    height: 25%;
+    border-radius: 10px;
+    background: ${skinHex};
+    left: 48.5%;
+    top: -14%;
+  }
+  
+  .med-bob-back {
+    position: absolute;
+    width: 60%;
+    height: 58%;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    background: ${hairHex};
+    left: 20%;
+    top: 13%;
+  }`;
 };
 
 //LONG STRAIGHT
@@ -207,49 +206,48 @@ const longStraightClass = (
   circleHex
 ) => {
   return `
-    .straight-top {
-      position: absolute;
-      width: 108%;
-      height: 95%;
-      background: transparent;
-      border-top: 2.8rem solid ${hairHex};
-      border-radius: 50%;
-      left: -4%;
-      top: -9%;
-    }
-    
-    .straight-top::after {
-      content: "";
-      position: absolute;
-      width: 1.5%;
-      height: 25%;
-      border-radius: 10px;
-      background: ${skinHex};
-      left: 48.5%;
-      top: -14%;
-    }
-    
-    .long-straight {
-      position: absolute;
-      width: 60%;
-      height: 80%;
-      border-radius: 50%;
-      background: ${hairHex};
-      box-shadow: 0 0 2px var${hairShadowHex};
-      left: 20%;
-      top: 13%;
-    }
-    
-    .long-straight::after {
-      content: "";
-      position: absolute;
-      height: 35%;
-      width: 45%;
-      border-radius: 50%;
-      background: ${circleHex};
-      bottom: -3%;
-      left: 27%;
-    }`;
+  .long-straight-top {
+    position: absolute;
+    width: 108%;
+    height: 95%;
+    background: transparent;
+    border-top: 2.8rem solid ${hairHex};
+    border-radius: 50%;
+    left: -4%;
+    top: -9%;
+  }
+  
+  .long-straight-top::after {
+    content: "";
+    position: absolute;
+    width: 1.5%;
+    height: 25%;
+    border-radius: 10px;
+    background: ${skinHex};
+    left: 48.5%;
+    top: -14%;
+  }
+  
+  .long-straight-back {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+    background: ${hairHex};
+    left: 20%;
+    top: 13%;
+  }
+  
+  .long-straight-back::after {
+    content: "";
+    position: absolute;
+    height: 35%;
+    width: 45%;
+    border-radius: 50%;
+    background: ${circleHex};
+    bottom: -3%;
+    left: 27%;
+  }`;
 };
 
 //MED CURLS
@@ -365,4 +363,254 @@ const mediumCurlsClass = (
     }`;
 };
 
-export { baseClass, mediumStraightClass, longStraightClass, mediumCurlsClass }
+//BUN
+const bunClass = (
+  hairHex,
+  hairShadowHex,
+  eyeHex,
+  skinHex,
+  skinShadowHex,
+  circleHex
+) => {
+  return `
+    .bun-top {
+        position: absolute;
+        width: 98%;
+        height: 70%;
+        background: transparent;
+        border-top: 2.3rem solid ${hairHex};
+        border-radius: 50%;
+        left: 1%;
+        top: -4%;
+      }
+      
+      .bun-top::after {
+        content: "";
+        width: 48%;
+        height: 50%;
+        border-radius: 50%;
+        background: ${hairHex};
+        left: 26%;
+        top: -60%;
+        position: absolute;
+        z-index: -2;
+      }
+      
+      .bun-top::before {
+        content: "";
+        position: absolute;
+        width: 46%;
+        height: 25%;
+        border-radius: 50%;
+        background: ${hairShadowHex};
+        left: 27%;
+        top: -34%;
+        z-index: -1;
+      }`;
+};
+
+const shortClass = (
+  hairHex,
+  hairShadowHex,
+  eyeHex,
+  skinHex,
+  skinShadowHex,
+  circleHex
+) => {
+  return `
+.short-hair {
+    position: absolute;
+    width: 98%;
+    height: 60%;
+    background: transparent;
+    border-top: 2.8rem solid ${hairHex};
+    border-radius: 50%;
+    left: 1%;
+    top: -2%;
+    }
+    
+    .short-hair::after {
+    content: '';
+    position: absolute;
+    background: ${skinHex};
+    width: 92%;
+    height: 20%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    left: 4%;
+    top: -1%;
+}
+`;
+};
+
+const curlyTopClass = (
+  hairHex,
+  hairShadowHex,
+  eyeHex,
+  skinHex,
+  skinShadowHex,
+  circleHex
+) => {
+  return `
+    .curly-top {
+        position: absolute;
+      width: 98%;
+      height: 60%;
+      background: transparent;
+      border-top: 2.8rem solid ${hairHex};
+      border-radius: 50%;
+      left: 1%;
+      top: -2%;
+    }
+    
+    .curly-top::after {
+      content: '';
+      position: absolute;
+      background: ${skinHex};
+      width: 92%;
+      height: 20%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      left: 4%;
+      top: -1%;
+    }
+    
+    .curly-top-back {
+      position: absolute;
+      width: 8%;
+      height: 12%;
+      border-radius: 50%;
+      background: ${hairHex};
+      left: 33%;
+      top: 17%;
+      transform: rotate(-10deg);
+    }
+    
+    .curly-top-back::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: ${hairHex};
+      left: 75%;
+      top: -20%;
+      transform: rotate(0deg);
+    }
+    
+    .curly-top-back::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: ${hairHex};
+      left: 150%;
+      top: -20%;
+      transform: rotate(0deg);
+    }
+    
+    .curly-top-back2 {
+      position: absolute;
+      width: 8%;
+      height: 12%;
+      border-radius: 50%;
+      background: ${hairHex};
+      left: 50.5%;
+      top: 13.5%;
+      transform: rotate(5deg);
+    }
+    
+    .curly-top-back2::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: ${hairHex};
+      left: 75%;
+      top: 12%;
+      transform: rotate(0deg);
+    }
+    
+    .curly-top-back2::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: ${hairHex};
+      left: 105%;
+      top: 19%;
+      transform: rotate(15deg);
+    }
+    `;
+};
+
+const ponyClass = (
+  hairHex,
+  hairShadowHex,
+  eyeHex,
+  skinHex,
+  skinShadowHex,
+  circleHex
+) => {
+  return `.pony-top {
+        position: absolute;
+        width: 98%;
+        height: 70%;
+        background: transparent;
+        border-top: 2.3rem solid ${hairHex};
+        border-radius: 50%;
+        left: 1%;
+        top: -4%;
+      }
+      
+      .pony-top::after {
+        content: "";
+        width: 40%;
+        height: 50%;
+        border-radius: 50%;
+        background: ${hairHex};
+        left: 29%;
+        top: -56%;
+        position: absolute;
+        z-index: -2;
+      }
+      
+      .pony-top::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 25%;
+        border-radius: 50%;
+        background: ${hairShadowHex};
+        left: 29.5%;
+        top: -34%;
+        z-index: -1;
+      }
+      
+      .pony-back {
+        position: absolute;
+        width: 10%;
+        height: 58%;
+        background: transparent;
+        border-radius: 50%;
+        border: 2.7rem solid;
+        border-color: transparent ${hairHex} transparent transparent;
+        left: 12%;
+        top: 10%;
+        transform: rotate(15deg);
+      }`;
+};
+
+export {
+  baseClass,
+  mediumStraightClass,
+  longStraightClass,
+  mediumCurlsClass,
+  bunClass,
+  shortClass,
+  curlyTopClass,
+  ponyClass,
+};

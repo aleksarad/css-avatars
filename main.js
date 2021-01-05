@@ -1,16 +1,25 @@
 //TODOS:
 //add a few more customizing options
-  // 2 masculine hairstyles
-  // smile / blush
+// 2 masculine hairstyles
+// smile / blush
 //dropdown
 //hide circle
 //change background color?
 //make an about modal - explaining stagnancy of some values
 //consider storing css in an obj vs string - weigh pros/cons
 
-import { shadeColor } from '/js/helpers/shadeColor.js';
-import { copyCode } from '/js/helpers/copyToClipBoard.js';
-import { baseClass, mediumStraightClass, longStraightClass, mediumCurlsClass } from '/js/cssClasses.js';
+import { shadeColor } from "/js/helpers/shadeColor.js";
+import { copyCode } from "/js/helpers/copyToClipBoard.js";
+import {
+  baseClass,
+  mediumStraightClass,
+  longStraightClass,
+  mediumCurlsClass,
+  bunClass,
+  shortClass,
+  curlyTopClass,
+  ponyClass,
+} from "/js/cssClasses.js";
 
 //update hair color
 const hairColor = document.querySelector("#hair-color");
@@ -52,7 +61,6 @@ function generateShadow(hexColor) {
   document.documentElement.style.setProperty("--black", `${newBlack}`);
 }
 
-
 //CHANGE HAIRSTYLES
 
 //select hair elements
@@ -91,11 +99,13 @@ hairSelect.addEventListener("change", function (e) {
     case "short-curly":
       shortCurly();
       break;
+    case "pony":
+      pony();
+      break;
     case "bald":
       clearHair();
   }
 });
-
 
 function medCurls() {
   clearHair();
@@ -107,13 +117,13 @@ function medCurls() {
 function medBob() {
   clearHair();
   hairBack.classList.add("med-bob-back");
-  hairTop.classList.add("straight-top");
+  hairTop.classList.add("med-bob-top");
 }
 
 function longStraight() {
   clearHair();
-  hairBack.classList.add("long-straight");
-  hairTop.classList.add("straight-top");
+  hairBack.classList.add("long-straight-back");
+  hairTop.classList.add("long-straight-top");
 }
 
 function bun() {
@@ -121,7 +131,7 @@ function bun() {
   hairTop.classList.add("bun-top");
 }
 
-function short(){
+function short() {
   clearHair();
   hairTop.classList.add("short-hair");
 }
@@ -133,32 +143,39 @@ function shortCurly() {
   hairTop.classList.add("curly-top");
 }
 
+function pony() {
+  clearHair();
+  hairBack.classList.add("pony-back");
+  hairTop.classList.add("pony-top");
+}
+
 //GENERATING CODE
 
 const generateButton = document.querySelector("#generate");
-generateButton.addEventListener("click", function() {
+generateButton.addEventListener("click", function () {
   const htmlCode = document.querySelector("#html-code");
   const cssCode = document.querySelector("#css-code");
   const avatarHTML = document.querySelector(".container").outerHTML;
 
   let skinHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--skin"
-  );
+    "--skin");
+
   let skinShadowHex = getComputedStyle(
     document.documentElement
   ).getPropertyValue("--shadow");
+
   let hairHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--hair"
-  );
+    "--hair");
+
   let hairShadowHex = getComputedStyle(
     document.documentElement
   ).getPropertyValue("--hair-shadow");
+
   let eyeHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--eye"
-  );
+    "--eye");
+
   let circleHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--circle"
-  );
+    "--circle");
 
   let CSSString = generateCSS(
     hairHex,
@@ -182,19 +199,37 @@ function generateCSS(
   skinShadowHex,
   circleHex
 ) {
-  let args = [hairHex, hairShadowHex, eyeHex, skinHex, skinShadowHex, circleHex]
+  let args = [
+    hairHex,
+    hairShadowHex,
+    eyeHex,
+    skinHex,
+    skinShadowHex,
+    circleHex,
+  ];
 
-  if (hairBack.classList.contains("med-bob-back")) return baseClass(...args) + mediumStraightClass(...args);
-  if (hairBack.classList.contains("long-straight")) return baseClass(...args) + longStraightClass(...args);
-  if (hairBack.classList.contains("med-curls-back")) return baseClass(...args) + mediumCurlsClass(...args);
+  if (hairTop.classList.contains("med-bob-top"))
+    return baseClass(...args) + mediumStraightClass(...args);
+  if (hairTop.classList.contains("long-straight-top"))
+    return baseClass(...args) + longStraightClass(...args);
+  if (hairTop.classList.contains("med-curls-front"))
+    return baseClass(...args) + mediumCurlsClass(...args);
+  if (hairTop.classList.contains("bun-top"))
+    return baseClass(...args) + bunClass(...args);
+  if (hairTop.classList.contains("short-hair"))
+    return baseClass(...args) + shortClass(...args);
+  if (hairTop.classList.contains("curly-top"))
+    return baseClass(...args) + curlyTopClass(...args);
+  if (hairTop.classList.contains("pony-top"))
+    return baseClass(...args) + ponyClass(...args);
   else {
     return baseClass(...args);
   }
 }
 
 //copy to clipboard
-const copyButtonsContainer = document.querySelector("#copy-button-container")
-copyButtonsContainer.addEventListener("click", function(e){
-  if(e.target.textContent === "copy html") copyCode("html");
-  if(e.target.textContent === "copy css") copyCode("css");
-})
+const copyButtonsContainer = document.querySelector("#copy-button-container");
+copyButtonsContainer.addEventListener("click", function (e) {
+  if (e.target.textContent === "copy html") copyCode("html");
+  if (e.target.textContent === "copy css") copyCode("css");
+});
