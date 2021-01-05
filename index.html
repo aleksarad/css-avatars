@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="main.css" />
     <style></style>
-    <script src="main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
   </head>
   <body>
     <div class="h1-container"><h1>css avatars</h1></div>
@@ -73,6 +73,9 @@
               <option value="med-curls" selected>medium curls</option>
               <option value="med-bob">medium straight</option>
               <option value="long-straight">long straight</option>
+              <option value="bun">bun</option>
+              <option value="short-curly">short curly</option>
+              <option value="short">short</option>
               <option value="bald">bald</option>
             </select>
           </div>
@@ -84,9 +87,9 @@
             <div>
               <button id="generate">generate code</button>
             </div>
-            <div>
-              <button id="copy-html" onclick="copyCode('html')">copy html</button>
-              <button id="copy-css" onclick="copyCode('css')">copy css</button>
+            <div id="copy-button-container">
+              <button id="copy-html">copy html</button>
+              <button id="copy-css">copy css</button>
             </div>
           </div>
           <textarea readonly id="html-code"></textarea>
