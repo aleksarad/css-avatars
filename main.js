@@ -6,6 +6,8 @@
   // smile / blush
 //dropdown
 //responsiveness
+//hide circle
+//change background color?
 
 //update hair color
 const hairColor = document.querySelector("#hair-color");

@@ -28,7 +28,7 @@ input[type="color"] {
 }
 
 input::-webkit-color-swatch {
-  border: 2px solid white;
+  border: 2px solid var(--accent);
 }
 
 input:hover, select:hover {
