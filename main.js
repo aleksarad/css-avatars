@@ -1,3 +1,12 @@
+//TODOS:
+//split up this js file - create a file for generator logic, and a file
+//for classes
+//add a few more customizing options
+  // 2 masculine hairstyles
+  // smile / blush
+//dropdown
+//responsiveness
+
 //update hair color
 const hairColor = document.querySelector("#hair-color");
 hairColor.addEventListener("input", function (e) {
@@ -113,7 +122,6 @@ function longStraight() {
   hairTop.classList.add("straight-top");
 }
 
-
 //GENERATING CODE
 
 const generateButton = document.querySelector("#generate");
@@ -150,10 +158,9 @@ generateButton.addEventListener("click", function () {
     circleHex
   );
 
-  htmlCode.textContent = `${avatarHTML}`;
-  cssCode.textContent = `${CSSString}`;
+  htmlCode.value = `${avatarHTML}`;
+  cssCode.value = `${CSSString}`;
 });
-
 
 //generate CSS function
 function generateCSS(
@@ -201,7 +208,7 @@ function generateCSS(
   if (hairBack.classList.contains("long-straight")) return base + longStraight;
   if (hairBack.classList.contains("med-curls-back")) return base + mediumCurls;
   else {
-    return base
+    return base;
   }
 }
 
@@ -290,12 +297,12 @@ const baseClass = (
 
 .brow-left {
   left: 13%;
-  top: 42%;
+  top: 39%;
 }
 
 .brow-right {
   right: 13%;
-  top: 42%;
+  top: 39%;
 }
 
 .nose {
@@ -362,7 +369,6 @@ const baseClass = (
 } `;
 };
 
-
 //MEDIUM STRAIGHT
 const mediumStraightClass = (
   hairHex,
@@ -405,7 +411,6 @@ const mediumStraightClass = (
     top: 14%;
   }`;
 };
-
 
 //LONG STRAIGHT
 const longStraightClass = (
@@ -459,8 +464,8 @@ const longStraightClass = (
     background: ${circleHex};
     bottom: -3%;
     left: 27%;
-  }`
-}
+  }`;
+};
 
 //MED CURLS
 const mediumCurlsClass = (
@@ -572,6 +577,19 @@ const mediumCurlsClass = (
     background: ${hairHex};
     top: 100%;
     left: 45%;
-  }`
-}
+  }`;
+};
 
+//copy to clipboard
+function copyCode(arg) {
+  let textToCopy;
+  if (arg === "html") {
+    textToCopy = document.querySelector("#html-code");
+  }
+  if (arg === "css") {
+    textToCopy = document.querySelector("#css-code");
+  }
+  textToCopy.select();
+  textToCopy.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+}

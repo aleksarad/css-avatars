@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   margin: 2rem 0;
+  font-size: 1.2rem;
 }
 
 label {
@@ -28,7 +29,6 @@ input[type="color"] {
 
 input::-webkit-color-swatch {
   border: 2px solid white;
-  border-radius: 10px;
 }
 
 input:hover, select:hover {

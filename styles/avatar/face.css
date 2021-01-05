@@ -7,7 +7,7 @@
     background: transparent;
     border-top: 5px solid var(--shadow);
     transform: rotate(3deg);
-    top: 47%;
+    top: 46%;
   }
   
   .eye-left {
@@ -55,12 +55,12 @@
   
   .brow-left {
     left: 13%;
-    top: 42%;
+    top: 39%;
   }
   
   .brow-right {
     right: 13%;
-    top: 42%;
+    top: 39%;
   }
   
   /* NOSE */

@@ -13,7 +13,7 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <h1>css avatars</h1>
+    <div class="h1-container"><h1>css avatars</h1></div>
     <div class="flex-container">
       <div class="left">
         <div class="avatar-input-container">
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="select-container">
-            <label for="hairstyles">hairstyle:</label>
+            <label for="hairstyles">hairstyle </label>
             <select name="hairstyles" id="hair-select">
               <option value="med-curls" selected>medium curls</option>
               <option value="med-bob">medium straight</option>
@@ -80,11 +80,17 @@
       </div>
       <div class="right">
         <div class="code-container">
-            <button id="generate">generate code</button>
-            <button id="copy-html">copy html</button>
-            <button id="copy-css">copy css</button>
-            <div id="html-code"></div>
-            <div id="css-code"></div>
+          <div class="button-container">
+            <div>
+              <button id="generate">generate code</button>
+            </div>
+            <div>
+              <button id="copy-html" onclick="copyCode('html')">copy html</button>
+              <button id="copy-css" onclick="copyCode('css')">copy css</button>
+            </div>
+          </div>
+          <textarea readonly id="html-code"></textarea>
+          <textarea readonly id="css-code"></textarea>
         </div>
       </div>
     </div>
