@@ -8,8 +8,8 @@
 //make an about modal - explaining stagnancy of some values
 //consider storing css in an obj vs string - weigh pros/cons
 
-import { shadeColor } from "/js/helpers/shadeColor.js";
-import { copyCode } from "/js/helpers/copyToClipBoard.js";
+import { shadeColor } from "./js/helpers/shadeColor.js";
+import { copyCode } from "./js/helpers/copyToClipBoard.js";
 import {
   baseClass,
   mediumStraightClass,
@@ -19,7 +19,7 @@ import {
   shortClass,
   curlyTopClass,
   ponyClass,
-} from "/js/cssClasses.js";
+} from "./js/cssClasses.js";
 
 //update hair color
 const hairColor = document.querySelector("#hair-color");
