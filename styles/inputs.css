@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   margin: 1.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 label {
@@ -32,7 +32,7 @@ input[type="color"] {
 }
 
 input::-webkit-color-swatch {
-  border: 2px solid var(--accent);
+  border: 2px solid var(--darker-accent);
 }
 
 input:hover, select:hover {
@@ -78,7 +78,7 @@ select::-ms-expand {
   background-color: var(--accent);
   justify-self: end;
   margin-top: .2rem;
-  margin-right: .3rem;
+  margin-right: .5rem;
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
 
@@ -86,3 +86,18 @@ select,
 .select:after {
   grid-area: select;
 }
+
+.corner-container {
+  margin: .5rem;
+  padding: .3rem;
+  z-index: 100;
+  width: 3.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+}
+
+input[type="checkbox"] {
+  display: inline;
+  align-self: center;
+} 

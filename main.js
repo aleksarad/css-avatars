@@ -61,6 +61,17 @@ function generateShadow(hexColor) {
   document.documentElement.style.setProperty("--black", `${newBlack}`);
 }
 
+//hide circle
+const circleCheckbox = document.querySelector("#bg-checkbox");
+circleCheckbox.addEventListener("click", function(){
+  if (circleCheckbox.checked == true) {
+    document.documentElement.style.setProperty("--circle", `white`)
+  }; 
+  if (circleCheckbox.checked === false) {
+    document.documentElement.style.setProperty("--circle", `transparent`)
+  }; 
+})
+
 //CHANGE HAIRSTYLES
 
 //select hair elements
