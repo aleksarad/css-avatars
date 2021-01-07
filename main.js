@@ -244,3 +244,23 @@ copyButtonsContainer.addEventListener("click", function (e) {
   if (e.target.textContent === "copy html") copyCode("html");
   if (e.target.textContent === "copy css") copyCode("css");
 });
+
+
+//MODAL
+const modal = document.querySelector("#about-modal")
+const modalOpen = document.querySelector("#modal-open")
+const modalClose = document.querySelector("#modal-close")
+
+modalOpen.addEventListener("click", function(){
+  modal.style.display = "block";
+})
+
+modalClose.addEventListener("click", function(){
+  modal.style.display = "none";
+})
+
+window.addEventListener("click", function(e){
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+})
