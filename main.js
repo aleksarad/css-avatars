@@ -61,14 +61,26 @@ function generateShadow(hexColor) {
   document.documentElement.style.setProperty("--black", `${newBlack}`);
 }
 
-//hide circle
+//update bg color
+const bgColorInput = document.querySelector("#bg-color");
+let BGColor = 'white'
+bgColorInput.addEventListener("input", function (e) {
+  changeBgColor(e.target.value);
+});
+
+function changeBgColor(newColor) {
+  document.documentElement.style.setProperty("--circle", `${newColor}`);
+}
+
+//change background shape
 const circleCheckbox = document.querySelector("#bg-checkbox");
+const container = document.querySelector(".container");
 circleCheckbox.addEventListener("click", function(){
   if (circleCheckbox.checked == true) {
-    document.documentElement.style.setProperty("--circle", `white`)
+    container.style.borderRadius = "50%";
   }; 
   if (circleCheckbox.checked === false) {
-    document.documentElement.style.setProperty("--circle", `transparent`)
+    container.style.borderRadius = "15px";
   }; 
 })
 
@@ -166,7 +178,7 @@ const generateButton = document.querySelector("#generate");
 generateButton.addEventListener("click", function () {
   const htmlCode = document.querySelector("#html-code");
   const cssCode = document.querySelector("#css-code");
-  const avatarHTML = document.querySelector(".container").outerHTML;
+  const avatarHTML = document.querySelector("#container").outerHTML;
 
   let skinHex = getComputedStyle(document.documentElement).getPropertyValue(
     "--skin");

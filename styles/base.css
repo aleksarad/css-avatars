@@ -12,7 +12,7 @@
   --background: #cdc7f1;
   --accent: #958adf;
   --darker-accent:#665da5;
-  --font-color: #292929;
+  --font-color: #3f3771;
 }
 
 * {
@@ -84,3 +84,4 @@ h1 {
   bottom: 0;
   right: 0;
 }
+
