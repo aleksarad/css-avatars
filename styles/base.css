@@ -49,16 +49,15 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 h1 {
   position: fixed;
   width: 100%;
-    text-align: center;
+  text-align: center;
   font-size: 2.8rem;
   justify-self: center; 
-  z-index: 6;
 }
 
 .code-container {

@@ -15,8 +15,19 @@
   <body>
     <div class="top-container">
       <div class="corner-container">
-        <label style="display: inline;" for="bg-checkbox"> show <br> circle </label>
-        <input type="checkbox" checked id="bg-checkbox" name="bg-checkbox" value="bg">
+        <!-- <label style="display: inline;" for="bg-checkbox"> show <br> circle </label>
+        <input type="checkbox" checked id="bg-checkbox" name="bg-checkbox" value="bg"> -->
+
+        <label class="checkbox">
+          <span class="checkbox__input">
+            <input type="checkbox" name="checkbox" id="bg-checkbox" value="bg" checked>
+            <span class="checkbox__control">
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                <path fill='none' stroke='' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+            </span>
+          </span>
+          <span class="radio__label">show <br> circle</span>
+        </label>
         </div>
       <h1>css avatars</h1>
       <div class="corner-container">
