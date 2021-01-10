@@ -45,25 +45,52 @@
   background: var(--background);
   padding: 2% 4%;
   overflow: scroll;
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 84%;
   height: 80%;
   margin: 1.7rem 4% 0 4%;
 }
 
 #modal-open {
-  background: var(--accent);
+  display: inline;
+  background: transparent;
   border: none;
-  color: white;
-  border: 2px solid white;
-  padding: 0.5rem .8rem;
-  border-radius: 10px;
+  color: var(--font-color);
+  /* padding: .5rem 0; */
+  font-size: .9rem;
 }
 
 #modal-open:hover {
   cursor: pointer;
-  background: white;
-  color: var(--darker-accent);
-  border: 2px solid var(--darker-accent);
-  transition: background 300ms;
+  color: white;
+  transition: color 300ms;
+}
+
+.modal ul {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 0 10px;
+  list-style: none;
+}
+
+.modal ul li {
+  margin: 12px 0;
+line-height: 1.4rem;
+  padding-left: 1rem;
+  text-indent: -1.5rem;
+}
+
+.modal ul li::before {
+  content: "💜";
+  margin-left: -.5rem;
+  margin-right: .5rem;
+}
+
+.modal p {
+  margin-left: 15px;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }

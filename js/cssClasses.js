@@ -5,13 +5,14 @@ const baseClass = (
   eyeHex,
   skinHex,
   skinShadowHex,
-  circleHex
+  circleHex,
+  borderRadiusVal
 ) => {
   return `.container {
     position: relative;
     width: 350px;
     height: 350px;
-    border-radius: 50%;
+    border-radius: ${borderRadiusVal};
     margin: 0 auto;
     background: ${circleHex};
   }
@@ -35,7 +36,7 @@ const baseClass = (
     background: transparent;
     border-top: 5px solid ${skinShadowHex};
     transform: rotate(3deg);
-    top: 47%;
+    top: 46%;
   }
   
   .eye-left {

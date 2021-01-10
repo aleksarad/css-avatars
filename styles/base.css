@@ -12,9 +12,12 @@
   --background: #cdc7f1;
   --accent: #958adf;
   --darker-accent:#665da5;
-  --font-color: #3f3771;
+  --font-color: #322b5e;
 }
-
+/* 
+--background: #ccb7d2;
+--accent: #9f7fa9;
+--darker-accent:#7a5b83; */
 * {
   padding: 0;
   margin: 0;
@@ -63,7 +66,7 @@ h1 {
 .code-container {
   background: var(--background);
   width: 70%;
-  height: 500px;
+  height: 540px;
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -74,7 +77,7 @@ h1 {
 }
 
 .avatar-input-container {
-  width: 500px;
+  width: 400px;
   height: 540px;
   overflow: auto;
   margin: auto;

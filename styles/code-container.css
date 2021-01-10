@@ -8,6 +8,7 @@
     border: none;
     resize: none;
     font-size: 1rem;
+    color: var(--font-color);
   }
 
   .code-container .button-container {

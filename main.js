@@ -75,12 +75,15 @@ function changeBgColor(newColor) {
 //change background shape
 const circleCheckbox = document.querySelector("#bg-checkbox");
 const container = document.querySelector(".container");
+let borderRadiusVal = '50%';
 circleCheckbox.addEventListener("click", function(){
   if (circleCheckbox.checked == true) {
     container.style.borderRadius = "50%";
+    borderRadiusVal = '50%';
   }; 
   if (circleCheckbox.checked === false) {
     container.style.borderRadius = "15px";
+    borderRadiusVal = '15px';
   }; 
 })
 
@@ -206,7 +209,8 @@ generateButton.addEventListener("click", function () {
     eyeHex,
     skinHex,
     skinShadowHex,
-    circleHex
+    circleHex,
+    borderRadiusVal
   );
 
   htmlCode.value = `${avatarHTML}`;
@@ -220,7 +224,8 @@ function generateCSS(
   eyeHex,
   skinHex,
   skinShadowHex,
-  circleHex
+  circleHex,
+  borderRadiusVal
 ) {
   let args = [
     hairHex,
@@ -229,6 +234,7 @@ function generateCSS(
     skinHex,
     skinShadowHex,
     circleHex,
+    borderRadiusVal
   ];
 
   if (hairTop.classList.contains("med-bob-top"))

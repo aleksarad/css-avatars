@@ -17,69 +17,54 @@
       <div class="modal-content">
         <span class="close" id="modal-close">&times;</span>
         <div class="modal-body">
-          <h2>about</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Cum sociis natoque
-            penatibus et magnis dis parturient. Ornare aenean euismod elementum
-            nisi quis eleifend quam adipiscing. Ullamcorper eget nulla facilisi
-            etiam dignissim diam quis. Augue ut lectus arcu bibendum at varius.
-            Nisl nunc mi ipsum faucibus vitae aliquet nec. Sit amet consectetur
-            adipiscing elit duis tristique. Aenean pharetra magna ac placerat
-            vestibulum. Nulla pharetra diam sit amet nisl suscipit adipiscing
-            bibendum. Molestie nunc non blandit massa.
+          <h2>about css avatars</h2>
+          <p>things to keep in mind:
+            <ul>
+              <li>this app was made just for fun as an exploration of css. feel free to play around with and tweak the code!</li>
+              <li>while these css images are, for the most part, responsive (you can just resize the container div to resize the avatar) and written in % values, there are a few exceptions. borders can’t be set with % values, so certain features will look funky on resize. any values not set in % are set in rems.</li>
+              <li>there is some browser rendering funkiness that occurs only in mobile on transparent elements using rounded borders. i am looking into alternatives, but in the meantime, i recommend using this app on desktop and/or screenshotting your creation.</li>
+              <li>i do plan to add more hairstyles and appearance options in time — css-ing is hard.</li>
+            </ul>
           </p>
         </div>
       </div>
     </div>
     <div class="top-container">
-      <div class="corner-container">
-        <label class="checkbox">
-          <span class="checkbox__input">
-            <input
-              type="checkbox"
-              name="checkbox"
-              id="bg-checkbox"
-              value="bg"
-              checked
-            />
-            <span class="checkbox__control">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path
-                  fill="none"
-                  stroke=""
-                  stroke-width="3"
-                  d="M1.73 12.91l6.37 6.37L22.79 4.59"
-                />
-              </svg>
-            </span>
-          </span>
-          <span class="radio__label"
-            >round <br />
-            border</span
-          >
-        </label>
-      </div>
       <h1>css avatars</h1>
-      <div class="corner-container">
-        <button id="modal-open">about</button>
-      </div>
     </div>
     <div class="flex-container">
       <div class="left">
         <div class="avatar-input-container">
+          <!-- <label class="checkbox">
+            <span class="checkbox__input">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="bg-checkbox"
+                value="bg"
+                checked
+              />
+              <span class="checkbox__control">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="none"
+                    stroke=""
+                    stroke-width="3"
+                    d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span class="radio__label"
+              >round <br />
+              border</span
+            >
+          </label> -->
           <div class="container" id="container">
             <div class="med-curls-back" id="hair-back"></div>
             <div class="med-curls-back2" id="hair-back2"></div>
@@ -142,8 +127,8 @@
             <label for="hair-select" id="select-label">hairstyle </label>
             <div class="select">
               <select name="hair-select" id="hair-select">
-                <option value="med-curls" selected>medium curls</option>
-                <option value="med-bob">medium straight</option>
+                <option value="med-curls" selected>med curls</option>
+                <option value="med-bob">med straight</option>
                 <option value="long-straight">long straight</option>
                 <option value="bun">bun</option>
                 <option value="pony">ponytail</option>
@@ -152,6 +137,36 @@
                 <option value="bald">bald</option>
               </select>
             </div>
+            <br />
+          </div>
+          <div class="checkbox-container">
+            <label class="checkbox">
+              <span class="checkbox__label">circle backdrop</span>
+              <span class="checkbox__input">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="bg-checkbox"
+                  value="bg"
+                  checked
+                />
+                <span class="checkbox__control">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="none"
+                      stroke=""
+                      stroke-width="3"
+                      d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
           </div>
         </div>
       </div>
@@ -172,6 +187,7 @@
       </div>
     </div>
     <footer>
+      <div class="footer-about-container"></div>
       <p>
         made by
         <a href="https://github.com/aleksarad" target="_blank">aleksa</a>
@@ -179,6 +195,9 @@
           src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/white-heart_1f90d.png"
         />
       </p>
+      <div class="footer-about-container">
+        <button id="modal-open">about</button>
+      </div>
     </footer>
   </body>
 </html>

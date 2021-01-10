@@ -1,15 +1,6 @@
 /* CONTAINER + BASE HEAD */
 /* these are unlikely to change */
 
-.container-square {
-  position: relative;
-  width: 350px;
-  height: 350px;
-  border-radius: 10px;
-  margin: 0 auto;
-  background: var(--circle);
-}
-
 /* AVATAR */
 
 .container {
@@ -19,6 +10,7 @@
   border-radius: 50%;
   margin: 0 auto;
   background: var(--circle);
+  margin-bottom: 1.3rem;
 }
 
 .head {
