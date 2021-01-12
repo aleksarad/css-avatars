@@ -52,6 +52,7 @@
   background: none !important;
   padding: 0 !important;
   border: none;
+  letter-spacing: -1px;
   color: var(--background);
   align-self: center;
   font-weight: 800;
@@ -80,18 +81,31 @@
 }
 
 .modal ul li {
-  margin: 12px 0;
+  margin: 1.1rem 0;
 line-height: 1.4rem;
   padding-left: 1rem;
   text-indent: -1.7rem;
 }
 
+.modal ul li strong {
+  color: var(--darker-accent);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 .modal ul li::before {
-  content: "⬤";
+  content: "✦";
   margin-left: -.5rem;
   margin-right: .9rem;
-  color: white;
-  -webkit-text-stroke: 1px var(--darker-accent);
+  color: var(--yellow);
+  font-size: 1.5rem;
+    -webkit-text-stroke: 1px var(--darker-accent);
+    text-shadow:
+    3px 3px 0 var(--darker-accent),
+  -1px -1px 0 var(--darker-accent),  
+   1px -1px 0 var(--darker-accent),
+   -1px 1px 0 var(--darker-accent),
+    1px 1px 0 var(--darker-accent);
+  /* -webkit-text-stroke: 1px var(--darker-accent); */
 }
 
 .modal p {
@@ -99,10 +113,22 @@ line-height: 1.4rem;
   color: var(--font-color);
 }
 
+.modal a {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: var(--yellow);
+  text-shadow: 0 0 2px var(--darker-accent), 0 0 2px var(--accent), 0 0 2px var(--accent);
+}
+
+.modal a:hover {
+  color: var(--accent);
+  text-shadow: none;
+}
+
 .modal h2 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 800;
+  font-size: 1.5rem;
   color: var(--accent);
   font-family: "M PLUS Rounded 1c", sans-serif;
   /* -webkit-text-stroke: 1px var(--darker-accent); */

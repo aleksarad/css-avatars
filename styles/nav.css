@@ -15,26 +15,36 @@ nav {
   justify-content: space-between;
 }
 
+#h1-wrapper {
+  position: relative;
+}
+
 
 h1 {
   font-size: 2.3rem;
   font-weight: 800;
   font-family: "M PLUS Rounded 1c", sans-serif;
   color: white;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  user-select: none;
   -webkit-text-stroke: 1px var(--darker-accent);
   text-shadow: 3px 3px 0 var(--accent), -1px -1px 0 var(--accent),
     1px -1px 0 var(--accent), -1px 1px 0 var(--accent), 1px 1px 0 var(--accent);
-  position: relative;
+  /* position: relative; */
 }
+
 
 #github-link {
   position: absolute;
   left: 1.5%;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   top: 75%;
   text-shadow: none;
   font-weight: 800;
-  -webkit-text-stroke: 1px transparent;
+  -webkit-text-stroke: 1px;
+  /* text-shadow: 3px 3px 0 var(--accent), -1px -1px 0 var(--accent),
+    1px -1px 0 var(--accent), -1px 1px 0 var(--accent), 1px 1px 0 var(--accent); */
   color: #8f85d5;
 }
 
@@ -47,34 +57,38 @@ h1 {
 
 .star {
   position: absolute;
-  font-size: 1.6rem;
-  color: #fff8d5;
+  font-size: 1.5rem;
+  color: var(--yellow);
   filter: opacity(0);
   text-shadow: none;
+  user-select: none;
+  -webkit-text-stroke: 1px var(--darker-accent);
+  text-shadow: 3px 3px 0 var(--accent), -1px -1px 0 var(--accent),
+    1px -1px 0 var(--accent), -1px 1px 0 var(--accent), 1px 1px 0 var(--accent);
 }
 
 #star1 {
-  top: 5%;
+  top: 8%;
   left: -5%;
-  animation: twinkle 0.9s linear 300ms 3;
+  animation: twinkle 1s linear 10ms 3;
 }
 
 #star2 {
-  top: 45%;
+  top: 50%;
   left: 38%;
-  animation: twinkle 0.9s linear 10ms 5;
+  animation: twinkle 1s linear 300ms 5;
 }
 
 #star3 {
-  top: -5%;
+  top: -3%;
   left: 58%;
-  animation: twinkle 0.9s linear 290ms 4;
+  animation: twinkle 1s linear 500ms 4;
 }
 
 #star4 {
-  top: 35%;
+  top: 40%;
   left: 85%;
-  animation: twinkle 0.9s linear 100ms 5;
+  animation: twinkle 1s linear 800ms 5;
 }
 
 @keyframes twinkle {

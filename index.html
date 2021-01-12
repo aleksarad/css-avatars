@@ -18,21 +18,22 @@
         <span class="close" id="modal-close">&times;</span>
         <div class="modal-body">
           <h2>about css avatars</h2>
-          <p>things to keep in mind:
+          <!-- <p>Things to keep in mind:</p> -->
             <ul>
-              <li>this app was made just for fun as an exploration of css. feel free to play around with and tweak the code!</li>
-              <li>while these css images are, for the most part, responsive (you can just resize the container div to resize the avatar) and written in % values, there are a few exceptions. borders can’t be set with % values, so certain features will look funky on resize. any values not set in % are set in rems.</li>
-              <li>there is some browser rendering funkiness that occurs only in mobile on transparent elements using rounded borders. i am looking into alternatives, but in the meantime, i recommend using this app on desktop and/or screenshotting your creation.</li>
-              <li>i do plan to add more hairstyles and appearance options in time — css-ing is hard.</li>
+              <!-- <li>Check out the github repo <a href="">here</a>!</li> -->
+              <li>This app was made just for fun as an exploration of CSS. Feel free to play around with and tweak the code. Check out the github repo <a href="https://github.com/aleksarad/css-avatars" target="_blank">here</a>!</li>
+              <li><strong>Responsiveness:</strong> For the most part, resizing the container div will resize your avatar, but there is an exception. Borders can’t be set with % values, so certain features will look funky on resize. Any values not set in % are set in rems, so you can update those if you want to resize your avatar accurately.</li>
+              <li>There is some browser rendering funkiness that occurs only in mobile on transparent elements using rounded borders. You can learn more about the issue <a href="https://stackoverflow.com/questions/65589194/curved-border-on-one-side-still-shows-thin-line-on-the-other-sides-when-backgrou" target="_blank">here</a>. I am looking into alternatives, but in the meantime, I recommend using this app on desktop and/or screenshotting your creation.</li>
+              <li>I do plan on adding more appearance options in the future including: Facial expressions, more hairstyles, and accessories. If you have suggestions, let me know!</li>
             </ul>
-          </p>
         </div>
         <!-- <div id="modal-footer"><a href="">check out the repo!</a></div> -->
       </div>
     </div>
     <nav>
       <div id="nav-wrapper">
-        <h1>css avatars
+        <div id="h1-wrapper">
+        <h1>css avatars</h1>
           <div class="star" id="star1"> 
             &#10022;
           </div>
@@ -46,7 +47,7 @@
             &#10022;
           </div>
           <span id="github-link">by <a href="https://github.com/aleksarad" target="_blank">aleksa</a></span>
-        </h1>
+          </div>
           <button id="modal-open">about</button>
       </div> 
     </nav>
