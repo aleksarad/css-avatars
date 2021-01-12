@@ -1,0 +1,91 @@
+nav {
+  width: 100%;
+  height: auto;
+  padding-top: 0.5rem;
+  z-index: 3;
+  position: absolute;
+}
+
+#nav-wrapper {
+  width: 92%;
+  height: 100%;
+  margin: auto;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+}
+
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px var(--darker-accent);
+  text-shadow: 3px 3px 0 var(--accent), -1px -1px 0 var(--accent),
+    1px -1px 0 var(--accent), -1px 1px 0 var(--accent), 1px 1px 0 var(--accent);
+  position: relative;
+}
+
+#github-link {
+  position: absolute;
+  left: 1.5%;
+  font-size: 0.9rem;
+  top: 75%;
+  text-shadow: none;
+  font-weight: 800;
+  -webkit-text-stroke: 1px transparent;
+  color: #8f85d5;
+}
+
+#github-link a {
+    color: #8f85d5;
+}
+#github-link a:hover {
+    color:  #fff8d5;
+}
+
+.star {
+  position: absolute;
+  font-size: 1.6rem;
+  color: #fff8d5;
+  filter: opacity(0);
+  text-shadow: none;
+}
+
+#star1 {
+  top: 5%;
+  left: -5%;
+  animation: twinkle 0.9s linear 300ms 3;
+}
+
+#star2 {
+  top: 45%;
+  left: 38%;
+  animation: twinkle 0.9s linear 10ms 5;
+}
+
+#star3 {
+  top: -5%;
+  left: 58%;
+  animation: twinkle 0.9s linear 290ms 4;
+}
+
+#star4 {
+  top: 35%;
+  left: 85%;
+  animation: twinkle 0.9s linear 100ms 5;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(0.3);
+  }
+  10% {
+    filter: opacity(0.5);
+  }
+  90% {
+    filter: opacity(1);
+    transform: scale(1.1);
+  }
+}

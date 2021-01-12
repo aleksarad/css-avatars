@@ -12,7 +12,8 @@
 }
 
 .modal-content {
-  background-color: var(--accent);
+  background-color: white;
+  border-radius: 10px;
   margin: 5rem auto; /* 15% from the top and centered */
   padding: 0.3rem;
   width: 500px;
@@ -22,27 +23,22 @@
 }
 
 .close {
-  /* width: 100%;
-    display: inline-block;
-    text-align: right; */
   float: right;
   font-size: 1.5rem;
   padding-right: 0.5rem;
-  color: var(--background);
-  /* position: absolute;
-    left: -3%;
-    top: 2%; */
+  color: var(--accent);
 }
 
 .close:hover,
 .close:focus {
-  color: var(--darker-accent);
+  color: var(--background);
   text-decoration: none;
   cursor: pointer;
 }
 
 .modal-body {
   background: var(--background);
+  border-radius: 10px;
   padding: 2% 4%;
   overflow: scroll;
   font-size: 1rem;
@@ -53,11 +49,21 @@
 
 #modal-open {
   display: inline;
-  background: transparent;
+  background: none !important;
+  padding: 0 !important;
   border: none;
-  color: var(--font-color);
-  /* padding: .5rem 0; */
-  font-size: .9rem;
+  color: var(--background);
+  align-self: center;
+  font-weight: 800;
+  font-size: 1.6rem;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  -webkit-text-stroke: 1px var(--darker-accent);
+  text-shadow:
+      3px 3px 0 var(--accent),
+    -1px -1px 0 var(--accent),  
+     1px -1px 0 var(--accent),
+     -1px 1px 0 var(--accent),
+      1px 1px 0 var(--accent);
 }
 
 #modal-open:hover {
@@ -77,20 +83,46 @@
   margin: 12px 0;
 line-height: 1.4rem;
   padding-left: 1rem;
-  text-indent: -1.5rem;
+  text-indent: -1.7rem;
 }
 
 .modal ul li::before {
-  content: "💜";
+  content: "⬤";
   margin-left: -.5rem;
-  margin-right: .5rem;
+  margin-right: .9rem;
+  color: white;
+  -webkit-text-stroke: 1px var(--darker-accent);
 }
 
 .modal p {
-  margin-left: 15px;
+  margin-left: 12px;
+  color: var(--font-color);
 }
 
 .modal h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  /* -webkit-text-stroke: 1px var(--darker-accent); */
+  text-shadow:
+      3px 3px 0 var(--darker-accent),
+    -1px -1px 0 var(--darker-accent),  
+     1px -1px 0 var(--darker-accent),
+     -1px 1px 0 var(--darker-accent),
+      1px 1px 0 var(--darker-accent);
+}
+
+#modal-footer {
+  /* border: 1px solid; */
+  /* width: 100%;
+  text-align: center;
+  padding-top: 1.5%; */
+}
+
+#modal-footer a {
+  text-decoration: none;
+  color: var(--darker-accent);
+  font-weight: 600;
 }

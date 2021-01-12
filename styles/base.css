@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap');
 
 :root {
   --skin: #8a6247;
@@ -23,6 +24,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  transition: color 300ms;
+}
+
 body {
   font-family: "Lato", sans-serif;
   color: var(--font-color);
@@ -32,6 +38,7 @@ body {
 .flex-container {
   display: flex;
   height: 100vh;
+  /* padding-top: 7vh; */
 }
 
 .left {
@@ -47,7 +54,12 @@ body {
   position: relative;
 }
 
-.top-container {
+.header {
+  width: 100%;
+  text-align: center;
+}
+
+/* .top-container {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -61,28 +73,30 @@ h1 {
   text-align: center;
   font-size: 2.8rem;
   justify-self: center; 
-}
+} */
 
 .code-container {
   background: var(--background);
+  border-radius: 10px;
   width: 70%;
   height: 540px;
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 8%;
   left: 0;
   bottom: 0;
   right: 0;
 }
 
 .avatar-input-container {
+  /* border: 1px solid; */
   width: 400px;
   height: 540px;
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 8%;
   left: 0;
   bottom: 0;
   right: 0;
