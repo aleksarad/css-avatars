@@ -421,12 +421,12 @@ const shortClass = (
   return `
 .short-hair {
     position: absolute;
-    width: 98%;
+    width: 97%;
     height: 60%;
     background: transparent;
-    border-top: 2.8rem solid ${hairHex};
+    border-top: 2.5rem solid ${hairHex};
     border-radius: 50%;
-    left: 1%;
+    left: 1.5%;
     top: -2%;
     }
     
@@ -454,13 +454,13 @@ const curlyTopClass = (
 ) => {
   return `
     .curly-top {
-        position: absolute;
-      width: 98%;
+      position: absolute;
+      width: 97%;
       height: 60%;
       background: transparent;
-      border-top: 2.8rem solid ${hairHex};
+      border-top: 2.5rem solid ${hairHex};
       border-radius: 50%;
-      left: 1%;
+      left: 1.5%;
       top: -2%;
     }
     
@@ -516,21 +516,21 @@ const curlyTopClass = (
       width: 8%;
       height: 12%;
       border-radius: 50%;
-      background: ${hairHex};
-      left: 50.5%;
-      top: 13.5%;
+      background:  ${hairHex};
+      left: 49%;
+      top: 13%;
       transform: rotate(5deg);
     }
     
     .curly-top-back2::after {
       content: '';
       position: absolute;
-      width: 100%;
+      width: 90%;
       height: 100%;
       border-radius: 50%;
       background: ${hairHex};
-      left: 75%;
-      top: 12%;
+      left: 80%;
+      top: 8%;
       transform: rotate(0deg);
     }
     
@@ -541,10 +541,10 @@ const curlyTopClass = (
       height: 100%;
       border-radius: 50%;
       background: ${hairHex};
-      left: 105%;
+      left: 120%;
       top: 19%;
       transform: rotate(15deg);
-    }
+    }    
     `;
 };
 
