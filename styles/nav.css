@@ -43,8 +43,6 @@ h1 {
   text-shadow: none;
   font-weight: 800;
   -webkit-text-stroke: 1px;
-  /* text-shadow: 3px 3px 0 var(--accent), -1px -1px 0 var(--accent),
-    1px -1px 0 var(--accent), -1px 1px 0 var(--accent), 1px 1px 0 var(--accent); */
   color: #8f85d5;
 }
 

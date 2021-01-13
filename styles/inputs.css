@@ -9,6 +9,7 @@
 
 label {
   display: block;
+  color: var(--font-color);
 }
 
 #select-label {
