@@ -1,8 +1,9 @@
 # ✨ CSS Avatars ✨ #
 
 A JavaScript generator that creates the code for customized CSS avatars.
-
-<img src="./demo-gif.gif">
+<p align="center">
+    <img src="./demo-gif.gif">
+</p>
 
 ## Built With ##
 Html, JavaScript, and CSS - nothing but the basics!
