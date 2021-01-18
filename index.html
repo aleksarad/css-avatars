@@ -19,37 +19,60 @@
         <div class="modal-body">
           <h2>about css avatars</h2>
           <!-- <p>Things to keep in mind:</p> -->
-            <ul>
-              <!-- <li>Check out the github repo <a href="">here</a>!</li> -->
-              <li>This app was made just for fun as an exploration of CSS. Feel free to play around with and tweak the code. Check out the github repo <a href="https://github.com/aleksarad/css-avatars" target="_blank">here</a>!</li>
-              <li><strong>Responsiveness:</strong> For the most part, resizing the container div will resize your avatar, but there is an exception. Borders can’t be set with % values, so certain features will look funky on resize. Any values not set in % are set in rems, so you can update those if you want to resize your avatar accurately.</li>
-              <li>There is some browser rendering funkiness that occurs only in mobile on transparent elements using rounded borders. You can learn more about the issue <a href="https://stackoverflow.com/questions/65589194/curved-border-on-one-side-still-shows-thin-line-on-the-other-sides-when-backgrou" target="_blank">here</a>. I am looking into alternatives, but in the meantime, I recommend using this app on desktop and/or screenshotting your creation.</li>
-              <li>I do plan on adding more appearance options in the future including: Facial expressions, more hairstyles, and accessories. If you have suggestions, let me know!</li>
-            </ul>
+          <ul>
+            <!-- <li>Check out the github repo <a href="">here</a>!</li> -->
+            <li>
+              This app was made just for fun as an exploration of CSS. Feel free
+              to play around with and tweak the code. Check out the github repo
+              <a href="https://github.com/aleksarad/css-avatars" target="_blank"
+                >here</a
+              >!
+            </li>
+            <li>
+              <strong>Responsiveness:</strong> For the most part, resizing the
+              container div will resize your avatar, but there is an exception.
+              Borders can’t be set with % values, so certain features will look
+              funky on resize. Any values not set in % are set in rems, so you
+              can update those if you want to resize your avatar accurately.
+            </li>
+            <li>
+              There is some browser rendering funkiness that occurs only in
+              mobile on transparent elements using rounded borders. You can
+              learn more about the issue
+              <a
+                href="https://stackoverflow.com/questions/65589194/curved-border-on-one-side-still-shows-thin-line-on-the-other-sides-when-backgrou"
+                target="_blank"
+                >here</a
+              >. I am looking into alternatives, but in the meantime, I
+              recommend using this app on desktop and/or screenshotting your
+              creation.
+            </li>
+            <li>
+              I do plan on adding more appearance options in the future
+              including: Facial expressions, more hairstyles, and accessories.
+              If you have suggestions, let me know!
+            </li>
+          </ul>
         </div>
-        <!-- <div id="modal-footer"><a href="">check out the repo!</a></div> -->
       </div>
     </div>
     <nav>
       <div id="nav-wrapper">
         <div id="h1-wrapper">
-        <h1>css avatars</h1>
-          <div class="star" id="star1"> 
-            &#10022;
-          </div>
-          <div class="star" id="star2">
-            &#10022;
-          </div>
-          <div class="star" id="star3">
-            &#10022;
-          </div>
-          <div class="star" id="star4">
-            &#10022;
-          </div>
-          <span id="github-link">by <a href="https://github.com/aleksarad" target="_blank">aleksa</a></span>
-          </div>
-          <button id="modal-open">about</button>
-      </div> 
+          <h1>css avatars</h1>
+          <div class="star" id="star1">&#10022;</div>
+          <div class="star" id="star2">&#10022;</div>
+          <div class="star" id="star3">&#10022;</div>
+          <div class="star" id="star4">&#10022;</div>
+          <span id="github-link"
+            >by
+            <a href="https://github.com/aleksarad" target="_blank"
+              >aleksa</a
+            ></span
+          >
+        </div>
+        <button id="modal-open">about</button>
+      </div>
     </nav>
     <div class="flex-container">
       <div class="left">
@@ -113,20 +136,59 @@
             </div>
           </div>
           <div class="select-container">
-            <label for="hair-select" id="select-label">hairstyle </label>
-            <div class="select">
-              <select name="hair-select" id="hair-select">
-                <option value="med-curls" selected>med curls</option>
-                <option value="med-bob">med straight</option>
-                <option value="long-straight">long straight</option>
-                <option value="bun">bun</option>
-                <option value="pony">ponytail</option>
-                <option value="short-curly">short curly</option>
-                <option value="short">short</option>
-                <option value="bald">bald</option>
-              </select>
+            <div class="select-wrapper">
+              <label for="hair-select" class="select-label"
+                >hairstyle
+              </label>
+              <div class="select">
+                <select name="hair-select" id="hair-select">
+                  <option value="med-curls" selected>med curls</option>
+                  <option value="med-bob">med straight</option>
+                  <option value="long-straight">long straight</option>
+                  <option value="bun">bun</option>
+                  <option value="pony">ponytail</option>
+                  <option value="short-curly">short curly</option>
+                  <option value="short">short</option>
+                  <option value="bald">bald</option>
+                </select>
+              </div>
             </div>
-            <br />
+            <div class="select-wrapper">
+              <label for="expression-select" class="select-label"
+                >expression
+              </label>
+              <div class="select">
+                <select name="expression-select" id="expression-select">
+                  <option value="default" selected>default</option>
+                  <option value="grin">smile</option>
+                  <option value="blush">blush</option>
+                </select>
+              </div>
+            </div>
+            <div class="select-wrapper">
+              <label for="jewelry-select" class="select-label"
+                >jewelry
+              </label>
+              <div class="select">
+                <select name="jewelry-select" id="jewelry-select">
+                  <option value="none" selected>none</option>
+                  <option value="small-hoops">small hoops</option>
+                  <option value="big-hoops">big hoops</option>
+                  <option value="silver-studs">silver studs</option>
+                  <option value="gold-studs">gold studs</option>
+                </select>
+              </div>
+            </div>
+            <!-- <div class="select-wrapper">
+              <label for="headwear-select" class="select-label"
+                >headwear
+              </label>
+              <div class="select">
+                <select name="headwear-select" id="headwear-select">
+                  <option value="none" selected>none</option>
+                </select>
+              </div>
+            </div> -->
           </div>
           <div class="checkbox-container">
             <label class="checkbox">

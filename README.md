@@ -1,12 +1,12 @@
 # ✨ CSS Avatars ✨ #
 
 <p align="center">
+A JavaScript generator that creates the code for customized CSS avatars.
     <kbd>
         <img src="./demo-gif.gif">
     </kbd>
 </p>
 
-A JavaScript generator that creates the code for customized CSS avatars.
 
 
 ## Built With ##

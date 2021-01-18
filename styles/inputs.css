@@ -3,17 +3,24 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: .8rem 0;
-  font-size: 1.1rem;
+  margin: .6rem 0;
+  font-size: 1.05rem;
+  flex-wrap: wrap;
 }
+
+.select-container {
+  justify-content: space-around;
+}
+
 
 label {
   display: block;
   color: var(--font-color);
+  text-align: center;
 }
 
-#select-label {
-  margin-top: .2rem;
+.select-label {
+  display: block;
 }
 
 .input-container div {
@@ -67,7 +74,7 @@ select::-ms-expand {
   border-radius: 4px;
   width: 9rem;
   border: 2px solid var(--accent);
-  margin-left: .5rem;
+  /* margin-left: .5rem; */
   cursor: pointer;
   line-height: 1.1;
   background-color: white;
