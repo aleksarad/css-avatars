@@ -40,6 +40,7 @@
     border-top: 3px solid black;
     top: -13%;
   }
+
   
   /* BROWS */
   
@@ -61,6 +62,26 @@
   .brow-right {
     right: 13%;
     top: 39%;
+  }
+
+  /* CHEEKS */
+  .cheek {
+    position: absolute;
+    width: 23%;
+    height: 9%;
+    background: #ed4b6b61;
+    top: 59%;
+    transform: rotate(5deg);
+    border-radius: 50%;
+  }
+  
+  .cheek-left {
+    left: 15%;
+  }
+  
+  .cheek-right {
+    transform: rotate(-5deg);
+    right: 14%;
   }
   
   /* NOSE */
@@ -88,6 +109,41 @@
     top: 69%;
     left: 35%;
   }
+
+  .smile {
+    position: absolute;
+    width: 28%;
+    height: 8%;
+    border-top: 1px solid var(--shadow);
+    border-bottom: 1px solid var(--shadow);
+    background: var(--mouth);
+    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+    top: 77.5%;
+    left: 37%;
+  }
+  
+  .smile::before {
+    position: absolute;
+    content: "";
+    background: white;
+    width: 88%;
+    height: 30%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    left: 6%;
+  }
+  
+  .smile::after {
+    position: absolute;
+    content: "";
+    background: #ED4B6B;
+    width: 50%;
+    height: 38%;
+    border-radius: 50%;
+    left: 25%;
+    bottom: 6%;
+  }
+  
   
   /* EARS */
   

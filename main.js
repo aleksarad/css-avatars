@@ -57,13 +57,15 @@ function changeSkinColor(newColor) {
 function generateShadow(hexColor) {
   const newShadow = shadeColor(hexColor, -25);
   document.documentElement.style.setProperty("--shadow", `${newShadow}`);
+  const newMouthShade = shadeColor(hexColor, -50);
+  document.documentElement.style.setProperty("--mouth", `${newMouthShade}`);
   const newBlack = shadeColor(hexColor, -60);
   document.documentElement.style.setProperty("--black", `${newBlack}`);
 }
 
 //update bg color
 const bgColorInput = document.querySelector("#bg-color");
-let BGColor = 'white'
+let BGColor = 'white';
 bgColorInput.addEventListener("input", function (e) {
   changeBgColor(e.target.value);
 });
@@ -116,6 +118,9 @@ hairSelect.addEventListener("change", function (e) {
     case "long-straight":
       longStraight();
       break;
+    case "long-side":
+      longSidePart();
+      break;
     case "bun":
       bun();
       break;
@@ -150,6 +155,12 @@ function longStraight() {
   clearHair();
   hairBack.classList.add("long-straight-back");
   hairTop.classList.add("long-straight-top");
+}
+
+function longSidePart() {
+  clearHair();
+  hairBack.classList.add("long-side-back");
+  hairTop.classList.add("long-side-top");
 }
 
 function bun() {
