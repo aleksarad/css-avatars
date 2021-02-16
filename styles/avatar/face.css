@@ -65,7 +65,7 @@
   }
 
   /* CHEEKS */
-  .cheek {
+  /* .cheek {
     position: absolute;
     width: 23%;
     height: 9%;
@@ -73,15 +73,28 @@
     top: 59%;
     transform: rotate(5deg);
     border-radius: 50%;
-  }
+  } */
   
   .cheek-left {
+    position: absolute;
+    width: 23%;
+    height: 9%;
+    background: #ed4b6b61;
+    top: 59%;
+    transform: rotate(5deg);
+    border-radius: 50%;
     left: 15%;
   }
   
   .cheek-right {
+    position: absolute;
+    width: 23%;
+    height: 9%;
+    background: #ed4b6b61;
+    top: 59%;
     transform: rotate(-5deg);
-    right: 14%;
+    border-radius: 50%;
+    right: 15%;
   }
   
   /* NOSE */
@@ -136,7 +149,7 @@
   .smile::after {
     position: absolute;
     content: "";
-    background: #ED4B6B;
+    background: #ed4b6be2;
     width: 50%;
     height: 38%;
     border-radius: 50%;

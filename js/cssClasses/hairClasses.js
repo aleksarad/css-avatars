@@ -605,6 +605,61 @@ const ponyClass = (
       }`;
 };
 
+const longSidePartClass = (
+  hairHex,
+  hairShadowHex,
+  eyeHex,
+  skinHex,
+  skinShadowHex,
+  circleHex
+) => {
+  return `
+  .long-side-top {
+    position: absolute;
+    width: 102%;
+    height: 95%;
+    background: transparent;
+    border-top: 2.5rem solid ${hairHex};
+    border-radius: 50%;
+    left: -1%;
+    top: -9%;
+  }
+  
+  .long-side-top::before {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    border-radius: 20px;
+    background: transparent;
+    border-left: 3px solid ${skinHex};
+    transform: rotate(-25deg);
+    left: 21%;
+    top: -7%;
+  }
+  
+  .long-side-back {
+    position: absolute;
+    width: 58%;
+    height: 80%;
+    border-radius: 50%;
+    background: ${hairHex};
+    left: 21%;
+    top: 13%;
+  }
+  
+  .long-side-back::before {
+    content: "";
+    position: absolute;
+    height: 35%;
+    width: 45%;
+    border-radius: 50%;
+    background: ${circleHex};
+    bottom: -3%;
+    left: 27%;
+  }`;
+};
+
 export {
   baseClass,
   mediumStraightClass,
@@ -614,4 +669,5 @@ export {
   shortClass,
   curlyTopClass,
   ponyClass,
+  longSidePartClass
 };
