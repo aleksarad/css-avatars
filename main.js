@@ -19,8 +19,9 @@ import {
   shortClass,
   curlyTopClass,
   ponyClass,
-  longSidePartClass
+  longSidePartClass,
 } from "./js/cssClasses/hairClasses.js";
+import { smileClass, grinClass, blushClass } from "./js/cssClasses/expressionClasses.js";
 
 //update hair color
 const hairColor = document.querySelector("#hair-color");
@@ -66,7 +67,7 @@ function generateShadow(hexColor) {
 
 //update bg color
 const bgColorInput = document.querySelector("#bg-color");
-let BGColor = 'white';
+let BGColor = "white";
 bgColorInput.addEventListener("input", function (e) {
   changeBgColor(e.target.value);
 });
@@ -78,17 +79,17 @@ function changeBgColor(newColor) {
 //change background shape
 const circleCheckbox = document.querySelector("#bg-checkbox");
 const container = document.querySelector(".container");
-let borderRadiusVal = '50%';
-circleCheckbox.addEventListener("click", function(){
+let borderRadiusVal = "50%";
+circleCheckbox.addEventListener("click", function () {
   if (circleCheckbox.checked == true) {
     container.style.borderRadius = "50%";
-    borderRadiusVal = '50%';
-  }; 
+    borderRadiusVal = "50%";
+  }
   if (circleCheckbox.checked === false) {
     container.style.borderRadius = "15px";
-    borderRadiusVal = '15px';
-  }; 
-})
+    borderRadiusVal = "15px";
+  }
+});
 
 //CHANGE HAIRSTYLES
 
@@ -96,7 +97,6 @@ circleCheckbox.addEventListener("click", function(){
 const hairBack = document.querySelector("#hair-back");
 const hairBack2 = document.querySelector("#hair-back2");
 const hairTop = document.querySelector("#hair-top");
-
 
 //clear hair classes:
 function clearHair() {
@@ -188,7 +188,6 @@ function pony() {
   hairTop.classList.add("pony-top");
 }
 
-
 // Adding expressions
 
 // selecting expression elements
@@ -196,16 +195,13 @@ const mouth = document.querySelector("#mouth");
 const cheekLeft = document.querySelector("#cheek-left");
 const cheekRight = document.querySelector("#cheek-right");
 
-
-
-
 // expression select
 const expressionSelect = document.querySelector("#expression-select");
 
 expressionSelect.addEventListener("change", function (e) {
   let expression = e.target.value;
   switch (expression) {
-    case "default":
+    case "smile":
       defaultSmile();
       break;
     case "blush":
@@ -228,26 +224,26 @@ function clearExpression() {
 
 function defaultSmile() {
   clearExpression();
-  mouth.classList.add("mouth");
+  mouth.classList.add("smile");
 }
 
 function blush() {
   clearExpression();
-  mouth.classList.add("mouth");
-  cheekLeft.classList.add("cheek-left");
-  cheekRight.classList.add("cheek-right");
+  mouth.classList.add("smile");
+  cheekLeft.classList.add("blush-left");
+  cheekRight.classList.add("blush-right");
 }
 
 function grin() {
   clearExpression();
-  mouth.classList.add("smile");
+  mouth.classList.add("grin");
 }
 
-function grinBlush(){
+function grinBlush() {
   clearExpression();
-  mouth.classList.add("smile");
-  cheekLeft.classList.add("cheek-left");
-  cheekRight.classList.add("cheek-right");
+  mouth.classList.add("grin");
+  cheekLeft.classList.add("blush-left");
+  cheekRight.classList.add("blush-right");
 }
 
 //GENERATING CODE
@@ -259,24 +255,38 @@ generateButton.addEventListener("click", function () {
   const avatarHTML = document.querySelector("#container").outerHTML;
 
   let skinHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--skin");
+    "--skin"
+  );
 
   let skinShadowHex = getComputedStyle(
     document.documentElement
   ).getPropertyValue("--shadow");
 
   let hairHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--hair");
+    "--hair"
+  );
 
   let hairShadowHex = getComputedStyle(
     document.documentElement
   ).getPropertyValue("--hair-shadow");
 
   let eyeHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--eye");
+    "--eye"
+  );
 
   let circleHex = getComputedStyle(document.documentElement).getPropertyValue(
-    "--circle");
+    "--circle"
+  );
+
+  let blackHex = getComputedStyle(document.documentElement).getPropertyValue(
+    "--black"
+  );
+
+  let mouthColorHex = getComputedStyle(document.documentElement).getPropertyValue(
+    "--mouth"
+  );
+
+  console.log(blackHex);
 
   let CSSString = generateCSS(
     hairHex,
@@ -285,7 +295,9 @@ generateButton.addEventListener("click", function () {
     skinHex,
     skinShadowHex,
     circleHex,
-    borderRadiusVal
+    borderRadiusVal,
+    mouthColorHex,
+    blackHex
   );
 
   htmlCode.value = `${avatarHTML}`;
@@ -300,7 +312,9 @@ function generateCSS(
   skinHex,
   skinShadowHex,
   circleHex,
-  borderRadiusVal
+  borderRadiusVal,
+  mouthColorHex,
+  blackHex
 ) {
   let args = [
     hairHex,
@@ -309,28 +323,57 @@ function generateCSS(
     skinHex,
     skinShadowHex,
     circleHex,
-    borderRadiusVal
+    borderRadiusVal,
+    mouthColorHex,
+    blackHex
   ];
 
+  console.log(blackHex);
+
+  let activeClasses = [baseClass(...args)];
+
+  //HAIR OPTIONS
   if (hairTop.classList.contains("med-bob-top"))
-    return baseClass(...args) + mediumStraightClass(...args);
-  if (hairTop.classList.contains("long-straight-top"))
-    return baseClass(...args) + longStraightClass(...args);
-  if (hairTop.classList.contains("med-curls-front"))
-    return baseClass(...args) + mediumCurlsClass(...args);
-  if (hairTop.classList.contains("bun-top"))
-    return baseClass(...args) + bunClass(...args);
-  if (hairTop.classList.contains("short-hair"))
-    return baseClass(...args) + shortClass(...args);
-  if (hairTop.classList.contains("curly-top"))
-    return baseClass(...args) + curlyTopClass(...args);
-  if (hairTop.classList.contains("pony-top"))
-    return baseClass(...args) + ponyClass(...args);
-  if (hairTop.classList.contains("long-side-top"))
-    return baseClass(...args) + longSidePartClass(...args);
-  else {
-    return baseClass(...args);
+    activeClasses.push(mediumStraightClass(...args));
+
+  else if (hairTop.classList.contains("long-straight-top"))
+    activeClasses.push(longStraightClass(...args));
+
+  else if (hairTop.classList.contains("med-curls-front"))
+    activeClasses.push(mediumCurlsClass(...args));
+
+  else if (hairTop.classList.contains("bun-top"))
+    activeClasses.push(bunClass(...args));
+
+  else if (hairTop.classList.contains("short-hair"))
+    activeClasses.push(shortClass(...args));
+
+  else if (hairTop.classList.contains("curly-top"))
+    activeClasses.push(curlyTopClass(...args));
+
+  else if (hairTop.classList.contains("pony-top"))
+    activeClasses.push(ponyClass(...args));
+
+  else if (hairTop.classList.contains("long-side-top"))
+    activeClasses.push(longSidePartClass(...args));
+
+  //EXPRESSION OPTIONS
+  //if cheek left contains blush-left && mouth contains grin --
+  if (mouth.classList.contains("grin") && cheekLeft.classList.contains("blush-left")) {
+    activeClasses.push(grinClass(...args), blushClass(...args))
+  } 
+  else if (cheekLeft.classList.contains("blush-left")) {
+    activeClasses.push(blushClass(...args), smileClass(...args))
   }
+  else if (mouth.classList.contains("grin")) {
+    activeClasses.push(grinClass(...args))
+  } else {
+    activeClasses.push(smileClass(...args))
+  }
+
+  //JEWELRY OPTIONS
+
+  return activeClasses.join(" ");
 }
 
 //copy to clipboard
@@ -340,22 +383,21 @@ copyButtonsContainer.addEventListener("click", function (e) {
   if (e.target.textContent === "copy css") copyCode("css");
 });
 
-
 //MODAL
-const modal = document.querySelector("#about-modal")
-const modalOpen = document.querySelector("#modal-open")
-const modalClose = document.querySelector("#modal-close")
+const modal = document.querySelector("#about-modal");
+const modalOpen = document.querySelector("#modal-open");
+const modalClose = document.querySelector("#modal-close");
 
-modalOpen.addEventListener("click", function(){
+modalOpen.addEventListener("click", function () {
   modal.style.display = "block";
-})
+});
 
-modalClose.addEventListener("click", function(){
+modalClose.addEventListener("click", function () {
   modal.style.display = "none";
-})
+});
 
-window.addEventListener("click", function(e){
+window.addEventListener("click", function (e) {
   if (e.target == modal) {
     modal.style.display = "none";
   }
-})
+});

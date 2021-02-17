@@ -1,4 +1,4 @@
-//CSS Classes
+//hair classes
 const baseClass = (
   hairHex,
   hairShadowHex,
@@ -99,18 +99,6 @@ const baseClass = (
     top: 67%;
     left: 43%;
     border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
-  }
-  
-  .mouth {
-    position: absolute;
-    width: 28%;
-    height: 10%;
-    background: transparent;
-    border-radius: 50%;
-    border: 2px solid;
-    border-color: transparent transparent #1a1a1a transparent;
-    top: 69%;
-    left: 35%;
   }
   
   .ear {
