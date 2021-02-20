@@ -22,6 +22,7 @@ import {
   longSidePartClass,
 } from "./js/cssClasses/hairClasses.js";
 import { smileClass, grinClass, blushClass } from "./js/cssClasses/expressionClasses.js";
+import { silverHoopClass, goldHoopClass, silverStudClass, goldStudClass } from "./js/cssClasses/jewelryClasses.js"
 
 //update hair color
 const hairColor = document.querySelector("#hair-color");
@@ -246,6 +247,65 @@ function grinBlush() {
   cheekRight.classList.add("blush-right");
 }
 
+//ADD JEWELRY
+
+//select hair elements
+const leftEarring = document.querySelector("#left-earring");
+const rightEarring = document.querySelector("#right-earring");
+
+//clear hair classes:
+function clearJewelry() {
+  leftEarring.className = "";
+  rightEarring.className = "";
+}
+
+//hair select
+const jewelrySelect = document.querySelector("#jewelry-select");
+
+jewelrySelect.addEventListener("change", function (e) {
+  let jewelry = e.target.value;
+  switch (jewelry) {
+    case "gold-hoops":
+      goldHoops();
+      break;
+    case "silver-hoops":
+      silverHoops();
+      break;
+    case "gold-studs":
+      goldStuds();
+      break;
+    case "silver-studs":
+      silverStuds();
+      break;
+    case "none":
+      clearJewelry();
+  }
+});
+
+function goldHoops() {
+  clearJewelry();
+  leftEarring.classList.add("gold-hoop");
+  rightEarring.classList.add("gold-hoop");
+}
+
+function silverHoops() {
+  clearJewelry();
+  leftEarring.classList.add("silver-hoop");
+  rightEarring.classList.add("silver-hoop");
+}
+
+function goldStuds() {
+  clearJewelry();
+  leftEarring.classList.add("gold-stud");
+  rightEarring.classList.add("gold-stud");
+}
+
+function silverStuds() {
+  clearJewelry();
+  leftEarring.classList.add("silver-stud");
+  rightEarring.classList.add("silver-stud");
+}
+
 //GENERATING CODE
 
 const generateButton = document.querySelector("#generate");
@@ -328,8 +388,6 @@ function generateCSS(
     blackHex
   ];
 
-  console.log(blackHex);
-
   let activeClasses = [baseClass(...args)];
 
   //HAIR OPTIONS
@@ -372,6 +430,18 @@ function generateCSS(
   }
 
   //JEWELRY OPTIONS
+  if (leftEarring.classList.contains("gold-hoop")) {
+    activeClasses.push(goldHoopClass());
+  }
+  else if (leftEarring.classList.contains("silver-hoop")) {
+    activeClasses.push(silverHoopClass());
+  }
+  else if (leftEarring.classList.contains("silver-stud")) {
+    activeClasses.push(silverStudClass());
+  } 
+  else if (leftEarring.classList.contains("gold-stud")) {
+    activeClasses.push(goldStudClass());
+  } 
 
   return activeClasses.join(" ");
 }
