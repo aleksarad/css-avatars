@@ -138,7 +138,7 @@ const baseClass = (
     background: ${skinShadowHex};
     width: 100%;
     height: 35%;
-    top: 20%;
+    top: 18%;
     border-radius: 50%;
   } `;
 };
